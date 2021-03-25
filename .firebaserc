@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "anket-3f6b6": {
+      "hosting": {
+        "shop": [
+          "anket-3f6b6"
+        ]
+      }
+    }
+  }
+}

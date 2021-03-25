@@ -30,7 +30,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/alertify-js/lib/alertify.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -120,6 +122,10 @@
               "devServerTarget": "shop:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     }

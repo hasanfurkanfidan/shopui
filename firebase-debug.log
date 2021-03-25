@@ -1,0 +1,79 @@
+[debug] [2021-03-25T16:13:31.217Z] ----------------------------------------------------------------------
+[debug] [2021-03-25T16:13:31.219Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Furkan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init shop
+[debug] [2021-03-25T16:13:31.219Z] CLI Version:   9.7.0
+[debug] [2021-03-25T16:13:31.219Z] Platform:      win32
+[debug] [2021-03-25T16:13:31.219Z] Node Version:  v14.15.5
+[debug] [2021-03-25T16:13:31.220Z] Time:          Thu Mar 25 2021 19:13:31 GMT+0300 (GMT+03:00)
+[debug] [2021-03-25T16:13:31.220Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-03-25T16:13:31.225Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-25T16:13:31.226Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Furkan\Desktop\AngularFirstProject\shop
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-03-25T16:16:56.800Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"shopui","name":"shopid"}
+[debug] [2021-03-25T16:16:57.775Z] <<< HTTP RESPONSE 409 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Thu, 25 Mar 2021 16:16:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=824","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-25T16:16:57.775Z] <<< HTTP RESPONSE BODY {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2021-03-25T16:16:57.779Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at module.exports (C:\Users\Furkan\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\Furkan\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\Furkan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at Request.<anonymous> (C:\Users\Furkan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:315:20)
+    at Request.EventEmitter.emit (domain.js:467:12)
+    at IncomingMessage.<anonymous> (C:\Users\Furkan\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:421:28)
+    at IncomingMessage.emit (events.js:327:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:467:12)
+    at endReadableNT (internal/streams/readable.js:1327:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID shopui. Please try again with a unique project ID.
+[debug] [2021-03-25T16:17:17.998Z] ----------------------------------------------------------------------
+[debug] [2021-03-25T16:17:18.000Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Furkan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init shop
+[debug] [2021-03-25T16:17:18.000Z] CLI Version:   9.7.0
+[debug] [2021-03-25T16:17:18.000Z] Platform:      win32
+[debug] [2021-03-25T16:17:18.000Z] Node Version:  v14.15.5
+[debug] [2021-03-25T16:17:18.002Z] Time:          Thu Mar 25 2021 19:17:18 GMT+0300 (GMT+03:00)
+[debug] [2021-03-25T16:17:18.002Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-03-25T16:17:18.007Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-25T16:17:18.007Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Furkan\Desktop\AngularFirstProject\shop
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
