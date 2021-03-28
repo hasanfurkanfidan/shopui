@@ -1,1 +1,28 @@
 <h3>Yeni Ürün Ekle</h3>
+<form #productAddForm="ngForm" (ngSubmit)="add(productAddForm)">
+    <div class="form-group">
+      <input type="text" placeholder="Ürünün Adı" name="model.name" class="form-control" #name="ngModel" [(ngModel)]="model.name"
+      id="price" required>        <div *ngIf="name.invalid&&name.touched"   class="alert alert-danger">Ürün ismi gereklidir.</div>
+    </div>
+    <div class="form-group">
+        <input type="text" placeholder="Ürünün Fiyatı" name="model.price" class="form-control" #price="ngModel" [(ngModel)]="model.price"
+            id="price" required>
+        <div *ngIf="price.invalid&&price.touched" class="alert alert-danger">Ürün Fiyatı gereklidir</div>
+    </div>
+    <div class="form-group">
+        <input type="text" placeholder="Ürünün Resmi" name="model.imageUrl" class="form-control" #imageUrl="ngModel"
+            [(ngModel)]="model.imageUrl" id="imageUrl">
+        <div *ngIf="imageUrl.invalid&&imageUrl.touched" class="alert alert-danger">Resim yolu girilmelidir.</div>
+    </div>
+    <div class="form-group">
+        <select #categoryId="ngModel" [(ngModel)]="model.categoryId" name="model.categoryId" class="form-control" id="categoryId" required>
+            <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <textarea placeholder="Ürünün Açıklaması" name="model.description" class="form-control" #description="ngModel"
+            [(ngModel)]="model.description" id="description" required></textarea>
+        <div *ngIf="description.invalid&&description.touched" class="alert alert-danger">Ürün açıklaması gereklidir</div>
+    </div>
+    <button type="submit" class="btn btn-primary" >Kaydet</button>
+</form>
