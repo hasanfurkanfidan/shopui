@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import { Category } from 'src/app/category/category';
 import { CategoryService } from 'src/app/dataServices/category.service';
 import { ProductService } from 'src/app/dataServices/product-service';
@@ -16,7 +17,7 @@ export class ProductAddForms2Component implements OnInit {
     private productService: ProductService,
     private categoryService: CategoryService,
     private formBuilder: FormBuilder,
-    private formGroup: FormGroup
+    private toastrService: ToastrService
   ) {}
   productAddForm: FormGroup;
   categoris: Category[];
@@ -33,12 +34,17 @@ export class ProductAddForms2Component implements OnInit {
   add() {
     if (this.productAddForm.valid) {
       this.product = Object.assign({}, this.productAddForm.value);
+      this.productService.addProduct(this.product).subscribe((data) => {
+        this.toastrService.success(this.product.name + 'başarı ile eklendi.');
+      });
+    } else {
+      this.toastrService.error('Ekleme başarısız!', 'Hata');
     }
   }
   ngOnInit(): void {
     this.categoryService.getCategories().subscribe((data) => {
       this.categoris = data;
     });
-    this.createProductAddForm()
+    this.createProductAddForm();
   }
 }

@@ -31,7 +31,9 @@
             "scripts": [
               "./node_modules/alertify-js/lib/alertify.min.js",
               "./node_modules/jquery/dist/jquery.min.js",
-              "./node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./src/custom.js",
+              "./src/new.js"
             ]
           },
           "configurations": {

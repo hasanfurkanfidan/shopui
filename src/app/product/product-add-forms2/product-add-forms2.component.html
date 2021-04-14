@@ -1,5 +1,5 @@
 <h3>Yeni Ürün Ekle-Reactive</h3>
-<form>
+<form [formGroup]="productAddForm">
   <div class="form-group">
     <label for="name">Ürün Adı</label>
     <input
@@ -38,10 +38,12 @@
   <div class="form-group">
     <label for="categoryId"></label>
     <select class="form-control" formControlName="categoryId">
-      <option>Kategori</option>
       <option *ngFor="let category of categoris" [ngValue]="category.id">
         {{ category.name }}
       </option>
     </select>
+  </div>
+  <div class="form-group">
+    <button class="btn btn-fill btn-primary" (click)="add()">Ekle</button>
   </div>
 </form>
