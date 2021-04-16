@@ -29,7 +29,7 @@ import { AccountService } from './dataServices/account.service';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AccountService,
+
     BrowserAnimationsModule,
     AppRoutingModule,
     FormsModule,
@@ -42,7 +42,7 @@ import { AccountService } from './dataServices/account.service';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [AlertifyService],
+  providers: [AlertifyService,AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

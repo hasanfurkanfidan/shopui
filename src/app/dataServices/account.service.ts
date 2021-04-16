@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { User } from '../login/user';
 
 @Injectable()
 export class AccountService {
